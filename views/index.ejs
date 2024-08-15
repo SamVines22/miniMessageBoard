@@ -1,0 +1,21 @@
+<html>
+    <body>
+     <h1><%= title %> </h1>
+        <ul>
+            <% for (let x = 0; x<message.length; x++) { %>
+            <li>
+                User: <%= message[x].user %>
+                <br>
+                <%= message[x].text %>
+                <br>
+                Date: <%= message[x].added %>
+                <br>
+                <form method = "GET" action = "/post/<%=[x]%>">
+                <button type = "submit" name = "<%=x%>"">Details</button>
+                </form>
+            </li>
+            <%}%>
+        </ul>
+        <a href = "/new">New post</a>
+    </body>
+</html>
