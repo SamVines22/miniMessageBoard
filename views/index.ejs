@@ -4,13 +4,13 @@
         <ul>
             <% for (let x = 0; x<message.length; x++) { %>
             <li>
-                User: <%= message[x].user %>
+                User: <%= message[x].username %>
                 <br>
                 <%= message[x].text %>
                 <br>
                 Date: <%= message[x].added %>
                 <br>
-                <form method = "GET" action = "/post/<%=[x]%>">
+                <form method = "GET" action = "/post/<%=message[x].id%>">
                 <button type = "submit" name = "<%=x%>"">Details</button>
                 </form>
             </li>
